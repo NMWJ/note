@@ -28,7 +28,7 @@
    linux    | Linus(个人)|开源
 
 ## 代码块
-```
+```java
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello World");
