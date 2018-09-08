@@ -60,7 +60,7 @@ int main()
 ```
 
 ### 图片
-![image](https://github.com/NMWJ/Note.git/c4d_01.jpg)
+![image](https://github.com/NMWJ/Note/blob/master/c4d_01.jpg)
 
 
 
