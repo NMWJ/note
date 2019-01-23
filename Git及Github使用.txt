@@ -50,9 +50,22 @@ $ ssh-keygen -t rsa -b 4096 -C "email@email.com"
 |      +-.=       |
 +----[SHA256]-----+
 
-
 验证是否成功
 ssh -T git@github.com
+# git@github.com: Permission denied (publickey).
+出现这种情况是因为更改了密钥默认生成路径
+切换回到密钥目录下
+ssh-add id_rsa
+# Could not open a connection to your authentication agent.
+运行命令 
+eval $(ssh-agent -s)
+# Agent pid 17140
+再次 ssh-add id_rsa
+# Enter passphrase for id_rsa:
+# Identity added: id_rsa (id_rsa)
+
+至此，下面可进行git常规操作
+ 
 
 设置用户和邮箱
 git config --global user.name "Your Name"
