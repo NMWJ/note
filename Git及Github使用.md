@@ -9,28 +9,28 @@ git config --global user.email "Your email"
 ---
 
 * 初始化仓库
-git init
+> git init
 
 * 把文件添加到仓库
-git add Git及Github使用.txt
+> git add Git及Github使用.txt
 
 * 描述提交信息
-git commit -m "git使用教程"
+> git commit -m "git使用教程"
 
 * 查看仓库状态
-git status
+> git status
 
 * 查看修改内容
-git diff Git及Github使用.txt
+> git diff Git及Github使用.txt
 
 * 查看历史记录
-git log
-git log --pretty=oneline
-git reflog
+> git log
+> git log --pretty=oneline
+> git reflog
 
 * 退回上一个版本
-git reset --hard HEAD^
-git reset --hard HEAD^2
+> git reset --hard HEAD^
+> git reset --hard HEAD^2
 
 cat
 ......
@@ -39,23 +39,24 @@ cat
 ## Github使用
  ### 创建本地ssh key
  > $ ssh-keygen -t rsa -b 4096 -C "email@email.com"
-
- >Generating public/private rsa key pair.
- >Enter file in which to save the key (/c/Users/ZKAH/.ssh/id_rsa): > > > /d/key/id_rsa
-
+```
+ Generating public/private rsa key pair.
+ Enter file in which to save the key (/c/Users/ZKAH/.ssh/id_rsa): > > > /d/key/id_rsa
+```
  ### 设置密钥生成路径 /d/key/id_rsa
-# Enter passphrase (empty for no passphrase):
-# Enter same passphrase again:
-# Your identification has been saved in /d/gitkey/id_rsa.
-# Your public key has been saved in /d/gitkey/id_rsa.pub.
-# The key fingerprint is:****
-# The key's randomart image is:
+ > Enter passphrase (empty for no passphrase):
+ > Enter same passphrase again:
+ > Your identification has been saved in /d/gitkey/id_rsa.
+ > Your public key has been saved in /d/gitkey/id_rsa.pub.
+ > The key fingerprint is:****
+ > he key's randomart image is:
+```
 +---[RSA 4096]----+
 |      +-.=       |
 +----[SHA256]-----+
-
- ###验证是否成功
- > ssh -T git@github.com
+```
+ ### 验证是否成功
+* ssh -T git@github.com
  > git@github.com: Permission denied (publickey).
  > 出现这种情况是因为更改了密钥默认生成路径
  > 切换回到密钥目录下
