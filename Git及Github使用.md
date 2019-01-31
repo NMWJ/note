@@ -6,8 +6,6 @@
 git config --global user.name "Your name"
 git config --global user.email "Your email"
 
----
-
 * 初始化仓库
 > git init
 
@@ -31,10 +29,7 @@ git config --global user.email "Your email"
 * 退回上一个版本
 > git reset --hard HEAD^
 > git reset --hard HEAD^2
-
-cat
-......
-
+> cat ......
 
 ## Github使用命令
  * 创建本地ssh key
@@ -79,16 +74,9 @@ cat
 
 至此，下面可进行git常规操作
  
-
 * 设置用户和邮箱
 > git config --global user.name "Your Name"
 > git config --global user.email "youreamil@mail"
 
 * 上传代码
 > git remote add origin git@github.com:yourName/yourRepo.git
-
-
-
-
-	
-	
