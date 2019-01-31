@@ -36,35 +36,43 @@ cat
 ......
 
 
-## Github使用
- ### 创建本地ssh key
+## Github使用命令
+ * 创建本地ssh key
  > $ ssh-keygen -t rsa -b 4096 -C "email@email.com"
 ```
  Generating public/private rsa key pair.
  Enter file in which to save the key (/c/Users/ZKAH/.ssh/id_rsa): > > > /d/key/id_rsa
 ```
- ### 设置密钥生成路径 /d/key/id_rsa
- > Enter passphrase (empty for no passphrase):
- > Enter same passphrase again:
- > Your identification has been saved in /d/gitkey/id_rsa.
- > Your public key has been saved in /d/gitkey/id_rsa.pub.
- > The key fingerprint is:****
- > he key's randomart image is:
+ * 设置密钥生成路径 /d/key/id_rsa
+ ```
+ Enter passphrase (empty for no passphrase):
+ Enter same passphrase again:
+ Your identification has been saved in /d/gitkey/id_rsa.
+ Your public key has been saved in /d/gitkey/id_rsa.pub.
+ The key fingerprint is:****
+ he key's randomart image is:
+ ```
 ```
 +---[RSA 4096]----+
 |      +-.=       |
 +----[SHA256]-----+
 ```
- ### 验证是否成功
-* ssh -T git@github.com
- > git@github.com: Permission denied (publickey).
- > 出现这种情况是因为更改了密钥默认生成路径
- > 切换回到密钥目录下
+* 验证是否成功
+ > ssh -T git@github.com
+ ```
+ git@github.com: Permission denied (publickey).
+ ```
+ 出现这种情况是因为更改了密钥默认生成路径
+ 切换回到密钥目录下
  > ssh-add id_rsa
- > Could not open a connection to your authentication agent.
- > 运行命令 
+ ```
+ Could not open a connection to your authentication agent.
+ ```
+ 运行命令 
  > eval $(ssh-agent -s)
- > Agent pid 17140
+ ```
+ Agent pid 17140
+ ```
  > 再次 ssh-add id_rsa
  > Enter passphrase for id_rsa:
  > Identity added: id_rsa (id_rsa)
@@ -72,12 +80,12 @@ cat
 至此，下面可进行git常规操作
  
 
-设置用户和邮箱
-git config --global user.name "Your Name"
-git config --global user.email "youreamil@mail"
+* 设置用户和邮箱
+> git config --global user.name "Your Name"
+> git config --global user.email "youreamil@mail"
 
-上传代码
-git remote add origin git@github.com:yourName/yourRepo.git
+* 上传代码
+> git remote add origin git@github.com:yourName/yourRepo.git
 
 
 
