@@ -46,8 +46,6 @@ git config --global user.email "Your email"
  Your public key has been saved in /d/gitkey/id_rsa.pub.
  The key fingerprint is:****
  he key's randomart image is:
- ```
-```
 +---[RSA 4096]----+
 |      +-.=       |
 +----[SHA256]-----+
